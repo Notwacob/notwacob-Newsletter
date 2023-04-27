@@ -23,11 +23,11 @@ app.post('/', function(req, res){
 function addEmailToMailchimp(email) {
     var request = require('request');
     var options = {
-        'method': 'POST',
-        'url': 'https://us9.api.mailchimp.com/3.0/lists/aebdbc7eed/members',
-        'headers': {
+        method: 'POST',
+        url: 'https://us9.api.mailchimp.com/3.0/lists/aebdbc7eed/members',
+        headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Basic YW55c3RyaW5nOjNjYmJjODdkYWQ2MTVhMDZkZjM3YmFhZGFhMmM2ZmNlLXVzOQ=='
+            Authorization: 'auth 3cbbc87dad615a06df37baadaa2c6fce-us9'
         },
         body: JSON.stringify({
             "email_address": email,
