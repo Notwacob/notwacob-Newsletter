@@ -1,7 +1,10 @@
+var path = require('path')
 module.exports = {
+    mode: 'none',
     entry: './src/scripts.js',
     output: {
-        filename: './public/js/build.js'
+        path: path.resolve(__dirname, './public/js/'),
+        filename: 'build.js'
     },
     watch: true
 }
