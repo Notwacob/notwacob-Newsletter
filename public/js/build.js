@@ -11006,12 +11006,13 @@ var __webpack_exports__ = {};
 var $ = __webpack_require__(1);
 
 $('form').submit(function(event){
+    var userEmail = $('#email').val();
     event.preventDefault();
     $.ajax({
         url: '/',
         type: 'POST',
         data: {
-            email: 'wilson.a.jacob@gmail.com'
+            email: userEmail
         },
         success: function(response) {
             console.log(response)
